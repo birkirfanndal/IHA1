@@ -1,6 +1,7 @@
 import re
 
 def add(numbers):
+
     if numbers == "":
         return "0"
 
@@ -11,8 +12,11 @@ def add(numbers):
         num_list = re.split(",|\n", numbers)
         num_sum = 0
         for i in num_list:
-            num_sum += int(i)
+            if int(i) < 1001:
+                num_sum += int(i)
         return str(num_sum)
+
+    
 
 
     
