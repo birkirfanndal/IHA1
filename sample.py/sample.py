@@ -3,7 +3,9 @@ def add(numbers):
         return "0"
     elif "," not in numbers:
         return str(numbers)
-    else:
+    elif "," in numbers:
         num_list = numbers.split(",")
-        num_sum = int(num_list[0])+ int(num_list[1])
+        num_sum = 0
+        for i in num_list:
+            num_sum += int(i)
         return str(num_sum)
